@@ -1,0 +1,186 @@
+/* ==== Global Styles ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4 {
+  margin-bottom: 0.5em;
+}
+
+/* ==== Header ==== */
+header {
+  background-color: #1a4d2e;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.logo h1 {
+  font-size: 1.2em;
+  line-height: 1.2;
+}
+
+.logo span {
+  font-weight: 400;
+  font-size: 0.9em;
+  color: #f4b400;
+}
+
+nav {
+  position: relative;
+}
+
+#menuBtn {
+  background: none;
+  color: white;
+  font-size: 1.5em;
+  border: none;
+  display: none;
+  cursor: pointer;
+}
+
+#navMenu {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+
+#navMenu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+#navMenu li a.active,
+#navMenu li a:hover {
+  color: #f4b400;
+}
+
+/* ==== Hero Section ==== */
+.hero {
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cta {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  padding: 0.75em 1.5em;
+  background-color: #f4b400;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ==== Info Grid ==== */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1em;
+  padding: 1em;
+}
+
+.info-grid > div {
+  background-color: white;
+  padding: 1em;
+  border-top: 5px solid #1a4d2e;
+}
+
+/* ==== Business Spotlight ==== */
+.business-spotlight {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1em;
+  padding: 1em;
+}
+
+.business-card {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 1em;
+  text-align: center;
+}
+
+.business-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 0.5em;
+}
+
+/* ==== Footer ==== */
+footer {
+  background-color: #1a4d2e;
+  color: white;
+  text-align: center;
+  padding: 2em 1em;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.footer-info address {
+  margin-bottom: 1em;
+  font-style: normal;
+}
+
+.social img {
+  width: 30px;
+  margin: 0 0.5em;
+}
+
+/* ==== Responsive Menu ==== */
+@media (max-width: 768px) {
+  #menuBtn {
+    display: block;
+  }
+
+  #navMenu {
+    display: none;
+    flex-direction: column;
+    background-color: #1a4d2e;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    padding: 1em;
+  }
+
+  #navMenu.show {
+    display: flex;
+  }
+}
