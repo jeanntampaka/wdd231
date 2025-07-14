@@ -134,9 +134,11 @@ nav {
 }
 
 .business-card img {
-  width: 80px;
-  height: 80px;
   margin-bottom: 0.5em;
+  display: block;
+  max-width: 100%;
+  height: 80px;
+  object-fit: contain;
 }
 
 /* ==== Footer ==== */
@@ -183,4 +185,45 @@ footer {
   #navMenu.show {
     display: flex;
   }
+}
+.view-toggle {
+  text-align: right;
+  margin: 1em;
+}
+
+.view-toggle button {
+  margin-left: 0.5em;
+  padding: 0.5em 1em;
+  background-color: #1a4d2e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.view-toggle button:hover {
+  background-color: #145f36;
+}
+
+/* Grid view (default) */
+.directory-list.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1em;
+}
+
+/* List view */
+.directory-list.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.directory-list.list .business-card img {
+  display: none;
+}
+
+.directory-list.list .business-card {
+  text-align: left;
+  padding: 1em;
 }
