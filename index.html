@@ -3,96 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Kigali Chamber of Commerce - Connecting Kigali businesses and communities." />
-  <title>Kigali Chamber of Commerce</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <meta name="description" content="Course Home Page for WDD231 - Frontend Development" />
+  <meta name="author" content="Papa Mondial" />
+  <title>WDD 231 | Frontend Development I</title>
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/small.css" />
+  <link rel="stylesheet" href="css/large.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="images/logo.png" alt="Kigali Chamber of Commerce Logo" width="100" height="100" />
-      <h1>Kigali<br><span>Chamber of Commerce</span></h1>
-    </div>
-    <nav>
-      <button id="menuBtn">☰</button>
-      <ul id="navMenu">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="discover.html">Discover</a></li>
-        <li><a href="directory.html">Directory</a></li>
-        <li><a href="join.html">Join</a></li>
-      </ul>
-    </nav>
+    <img src="images/logo.svg" alt="Site Logo" width="64" height="64">
+    <h1>WDD 231: Frontend Development I</h1>
+    <button id="menu" aria-label="Menu Button">☰</button>
   </header>
 
+  <nav>
+    <ul class="navigation">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Learning Activities</a></li>
+      <li><a href="#">Resources</a></li>
+    </ul>
+  </nav>
+
   <main>
-    <section class="hero">
-      <img src="images/hero.png" alt="Kigali Cityscape" class="hero-img" />
-      <button class="cta">Keynote Tickets</button>
-    </section>
-
-    <h2>Home</h2>
-    <section class="info-grid">
-      <div class="events">
-        <h3>Events</h3>
-        <p>Stay tuned for upcoming Kigali business events and community activities.</p>
+    <section>
+      <h2>My Course List</h2>
+      <div class="filters">
+        <button id="allBtn">All</button>
+        <button id="wddBtn">WDD</button>
+        <button id="cseBtn">CSE</button>
       </div>
-      <div class="weather">
-        <h3>Current Weather</h3>
-        <p><strong>75&deg;F</strong><br>Partly Cloudy<br>High: 85&deg;, Low: 52&deg;<br>Humidity: 34%<br>Sunrise: 7:30am<br>Sunset: 5:59pm</p>
-      </div>
-      <div class="forecast">
-        <h3>Weather Forecast</h3>
-        <p>Today: <strong>90&deg;F</strong><br>Wednesday: <strong>89&deg;F</strong><br>Thursday: <strong>68&deg;F</strong></p>
-      </div>
-    </section>
-
-    <section class="business-spotlight">
-      <div class="business-card">
-        <img src="images/business1.png" alt="Business 1" />
-        <h4>Business Name</h4>
-        <p>Business Tag Line</p>
-        <p><strong>Email:</strong> info@gmail.com<br>
-        <strong>Phone:</strong> 800-555-1234<br>
-        <strong>URL:</strong> mybusiness.com</p>
-      </div>
-      <div class="business-card">
-        <img src="images/business2.png" alt="Business 2" />
-        <h4>Business Name</h4>
-        <p>Business Tag Line</p>
-        <p><strong>Email:</strong> info@gmail.com<br>
-        <strong>Phone:</strong> 800-555-1234<br>
-        <strong>URL:</strong> mybusiness.com</p>
-      </div>
-      <div class="business-card">
-        <img src="images/business3.png" alt="Business 3" />
-        <h4>Business Name</h4>
-        <p>Business Tag Line</p>
-        <p><strong>Email:</strong> info@gmail.com<br>
-        <strong>Phone:</strong> 800-555-1234<br>
-        <strong>URL:</strong> mybusiness.com</p>
-      </div>
+      <div class="course-grid" id="courseContainer"></div>
+      <p>Total Credits: <span id="totalCredits"></span></p>
     </section>
   </main>
 
   <footer>
-    <div class="footer-info">
-      <address>
-        <strong>Kigali Chamber of Commerce</strong><br>
-        10 KN 4 Ave<br>
-        Kigali, Rwanda<br>
-        info@kigalicc.org<br>
-        (+250) 788 000 111
-      </address>
-      <div class="social">
-        <img src="images/youtube.png" alt="YouTube">
-        <img src="images/twitter.png" alt="Twitter">
-        <img src="images/linkedin.png" alt="LinkedIn">
-      </div>
+    <p>&copy; <span id="year"></span> Papa Mondial | Rwanda</p>
+    <p id="lastModified"></p>
+    <div class="social">
+      <a href="#">Facebook</a>
+      <a href="#">LinkedIn</a>
     </div>
-    <p>WDD231 Class Project<br>Jean Ntampaka<br>&copy; <span id="year"></span> Kigali Chamber of Commerce<br>Last Modification: <span id="lastModified"></span></p>
   </footer>
 
-  <script src="js/scripts.js"></script>
+  <script src="js/navigation.js" defer></script>
+  <script src="js/date.js" defer></script>
+  <script src="js/course.js" defer></script>
 </body>
 </html>
