@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Kigali Tech Solutions",
+    "address": "KN 1 Rd, Kigali",
+    "phone": "+250 788 123 456",
+    "website": "https://kigalitech.rw",
+    "image": "kigalitech.png",
+    "level": "Gold",
+    "category": "Technology"
+  },
+  {
+    "name": "Green Hills Hotel",
+    "address": "KG 123 St, Nyarutarama",
+    "phone": "+250 788 654 321",
+    "website": "https://greenhillshotel.rw",
+    "image": "greenhills.png",
+    "level": "Silver",
+    "category": "Hospitality"
+  },
+  {
+    "name": "Rwanda FinBank",
+    "address": "KN 3 Ave, Kigali",
+    "phone": "+250 788 987 654",
+    "website": "https://finbank.rw",
+    "image": "finbank.png",
+    "level": "Gold",
+    "category": "Finance"
+  },
+  {
+    "name": "Kigali International School",
+    "address": "KG 201 Rd, Kacyiru",
+    "phone": "+250 788 000 888",
+    "website": "https://kis.rw",
+    "image": "kis.png",
+    "level": "Non-profit",
+    "category": "Education"
+  },
+  {
+    "name": "Smart AgroTech",
+    "address": "NR 15, Nyagatare",
+    "phone": "+250 788 112 233",
+    "website": "https://smartagro.rw",
+    "image": "smartagro.png",
+    "level": "Bronze",
+    "category": "Agriculture"
+  },
+  {
+    "name": "Innovate Media Group",
+    "address": "KN 5 Rd, Kiyovu",
+    "phone": "+250 788 445 667",
+    "website": "https://innovatemedia.rw",
+    "image": "innovatemedia.png",
+    "level": "Silver",
+    "category": "Media"
+  },
+  {
+    "name": "Hope Medical Center",
+    "address": "KG 55 St, Kimironko",
+    "phone": "+250 788 778 899",
+    "website": "https://hopemedical.rw",
+    "image": "hopemedical.png",
+    "level": "Gold",
+    "category": "Health"
+  }
+]
