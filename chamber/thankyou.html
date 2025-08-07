@@ -33,7 +33,23 @@
     <p><strong>Organization:</strong> <span id="organization"></span></p>
     <p><strong>Timestamp:</strong> <span id="timestamp"></span></p>
   </main>
-  <footer><p>&copy; 2025 Chamber of Commerce</p></footer>
+  <footer>
+    <div class="footer-info">
+      <address>
+        <strong>Kigali Chamber of Commerce</strong><br>
+        10 KN 4 Ave<br>
+        Kigali, Rwanda<br>
+        info@kigalicc.org<br>
+        (+250) 788 000 111
+      </address>
+      <div class="social">
+        <img src="images/youtube.png" alt="YouTube">
+        <img src="images/twitter.png" alt="Twitter">
+        <img src="images/linkedin.png" alt="LinkedIn">
+      </div>
+    </div>
+    <p>WDD231 Class Project<br>Jean Ntampaka<br>&copy; <span id="year"></span> Kigali Chamber of Commerce<br>Last Modification: <span id="lastModified"></span></p>
+  </footer>
   <script>
     const params = new URLSearchParams(window.location.search);
     document.getElementById('fname').textContent = params.get('fname');
