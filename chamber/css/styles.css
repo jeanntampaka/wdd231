@@ -227,3 +227,77 @@ footer {
   text-align: left;
   padding: 1em;
 }
+
+/*The join page*/
+body {
+  font-family: system-ui, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+}
+header, footer {
+  background-color: #005f73;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+.join-container {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .join-container { flex-direction: row; gap: 2rem; }
+}
+.form-section {
+  flex: 2;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+form label {
+  display: block;
+  margin-bottom: 1rem;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+input[type="submit"] {
+  background-color: #005f73;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+input[type="submit"]:hover {
+  background-color: #0a9396;
+}
+.membership-cards {
+  flex: 1;
+  display: grid;
+  gap: 1rem;
+}
+.card {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+.card:nth-child(1) { animation-delay: 0.2s; }
+.card:nth-child(2) { animation-delay: 0.4s; }
+.card:nth-child(3) { animation-delay: 0.6s; }
+.card:nth-child(4) { animation-delay: 0.8s; }
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
