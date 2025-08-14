@@ -1,9 +1,11 @@
+// === directory.js (Improved Version) ===
 const directoryList = document.getElementById("directoryList");
 const filter = document.getElementById("filter");
 
 async function getMembers() {
   try {
     const response = await fetch("data/members.json");
+    if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
     const businesses = await response.json();
 
     renderBusinesses(businesses, "all");
@@ -15,20 +17,27 @@ async function getMembers() {
     });
 
     // Grid view
-    document.getElementById("gridView").addEventListener("click", () => {
+    const gridBtn = document.getElementById("gridView");
+    const listBtn = document.getElementById("listView");
+
+    gridBtn.addEventListener("click", () => {
       directoryList.classList.add("grid");
       directoryList.classList.remove("list");
+      gridBtn.setAttribute("aria-pressed", "true");
+      listBtn.setAttribute("aria-pressed", "false");
     });
 
     // List view
-    document.getElementById("listView").addEventListener("click", () => {
+    listBtn.addEventListener("click", () => {
       directoryList.classList.add("list");
       directoryList.classList.remove("grid");
+      listBtn.setAttribute("aria-pressed", "true");
+      gridBtn.setAttribute("aria-pressed", "false");
     });
 
   } catch (error) {
     console.error("Error fetching members:", error);
-    directoryList.innerHTML = "<p>Failed to load directory.</p>";
+    showError("Failed to load directory. Please try again later.");
   }
 }
 
@@ -42,25 +51,34 @@ function renderBusinesses(businesses, category) {
       );
 
   if (filtered.length === 0) {
-    directoryList.innerHTML = "<p>No businesses found in this category.</p>";
+    showError("No businesses found in this category.");
     return;
   }
 
   filtered.forEach(biz => {
-    const card = document.createElement("div");
+    const card = document.createElement("article");
     card.className = "business-card";
+
+    const imgSrc = biz.image
+      ? `images/${biz.image}`
+      : "images/default-logo.png"; // fallback image
+
     card.innerHTML = `
-      <img src="images/${biz.image}" alt="${biz.name} logo" loading="lazy">
+      <img src="${imgSrc}" alt="${biz.name} logo" loading="lazy" onerror="this.src='images/default-logo.png'">
       <div class="business-info">
         <h4>${biz.name}</h4>
         <p><strong>Address:</strong> ${biz.address}</p>
         <p><strong>Phone:</strong> ${biz.phone}</p>
         <p><strong>Level:</strong> ${biz.level}</p>
-        <p><a href="${biz.website}" target="_blank">Visit Website</a></p>
+        <p><a href="${biz.website}" target="_blank" rel="noopener noreferrer">Visit Website</a></p>
       </div>
     `;
     directoryList.appendChild(card);
   });
+}
+
+function showError(message) {
+  directoryList.innerHTML = `<p class="error-message" role="alert">${message}</p>`;
 }
 
 getMembers();

@@ -1,4 +1,4 @@
-// === Responsive Menu Toggle ===
+// === Responsive Menu Toggle | scripts.js===
 const menuBtn = document.getElementById('menuBtn');
 const navMenu = document.getElementById('navMenu');
 
